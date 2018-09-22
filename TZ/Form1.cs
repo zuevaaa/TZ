@@ -19,7 +19,17 @@ namespace TZ
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Form2*Show();
+            Form f2 = new Form2();
+
+            f2.Show();
+            button1.Enabled = false;
+            this.Visible = false;
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+           // string[] stringArray = new string[];
         }
     }
 }
