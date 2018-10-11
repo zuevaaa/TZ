@@ -13,7 +13,7 @@ namespace TZ
 {
     public partial class Form1 : Form
     {
-        string[] mas;
+       
         int i;
         int control_number = 0;
          
@@ -33,23 +33,19 @@ namespace TZ
                 if (text1 != "")
                 {
 
-                    foreach (char c in text1)
-                    {
-                        
-                        mas[i] = c.ToString();
-                        i++;
-                    }
+                if (((text1[0] == 'T') || (text1[0] == 't') || (text1[0] == 'Т') || (text1[0] == 'т')))
+                { control_number++; }
 
-                    for (i = 1; i < mas.Length; i++)
+
+                for (i = 1; i < text1.Length; i++)
                     {
-                        if ((mas[i - 1] == " ") && ((mas[i] == "T") || (mas[i] == "t") || (mas[i] == "Т") || (mas[i] == "т")))
+                        if ((text1[i - 1] == ' ') && ((text1[i] == 'T') || (text1[i] == 't') || (text1[i] == 'Т') || (text1[i] == 'т')))
                         {
                             control_number++;
                         }
                     }
 
-                    if (((mas[0] == "T") || (mas[0] == "t") || (mas[0] == "Т") || (mas[0] == "т")))
-                        { control_number++; }
+                   
                     if (control_number == 0)
                         { MessageBox.Show("Нет слов начинающихся с буквы Т!"); }
                     else
