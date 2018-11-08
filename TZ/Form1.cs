@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
 namespace TZ
 {
+
+
     public partial class Form1 : Form
     {
         public Form1()
@@ -19,7 +14,7 @@ namespace TZ
             textBox1.Focus();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
 
             string text1 = textBox1.Text;
@@ -41,14 +36,13 @@ namespace TZ
             }
         }
 
-        private static int countWordsStartWithT(string text1)
+        public static int countWordsStartWithT(string text1)
         {
             int control_number = 0;
             if (((text1[0] == 'T') || (text1[0] == 't') || (text1[0] == 'Т') || (text1[0] == 'т')))
             {
                 control_number++;
             }
-
 
             for (int i = 1; i < text1.Length; i++)
             {
